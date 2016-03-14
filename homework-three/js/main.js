@@ -58,11 +58,7 @@ $("#row4").find("div").addClass("selected");
 // 16.	Clicking reset should remove the selected class from everything and fade in the header element, the footer, and all elements with the class .box
 $("button").on("click", function(){
 
-	$("body").find("div").removeClass("selected");
+	$("div").removeClass("selected");
 
-	$("header").fadeIn();
-
-	$("footer").fadeIn();
-
-	$(".box").fadeIn();
+	$("header, footer, .box").fadeIn();
 });
