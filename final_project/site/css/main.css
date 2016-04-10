@@ -9,6 +9,12 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html {
     color: #222;
@@ -92,22 +98,403 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Author's custom styles - FOR WHOLE SITE
+   ========================================================================== */
+.site{
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 40px;
+    }
+
+label {
+        display: none;
+    }
+
+
+/* headings 
+==========================================================================*/
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif; 
+    font-size: 20px;
+}
+
+
+
+
+
+/* ==========================================================================
+   header bar for top of site
    ========================================================================== */
 
 
+    .logo-small {
+        float: left;
+    }
+
+    nav {
+      float: right;
+      padding-left: 30px;
+      text-align: right;
+
+    }
+
+    nav li {
+      float: left;
+      text-align: center;
+      list-style-type: none;
+
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: black;
+    }
+
+    .sign-in-action {
+        float: right;
+        display: block;
+        padding: 10px 15px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+    }
+
+    .sign-in-action a {
+        text-decoration: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #4495CE;
+        text-align: center;
+
+    }
+
+    .logo-big {
+        margin: 0 auto;
+        padding-top: 10%;
+        display: block;
+        text-align: center;
+    }
+
+    .searchbar {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .searchbar form{
+        overflow: hidden;
+    }
+ 
+    #searchbar {
+        height: 44px;
+        width: 75%;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        float: left;
+        margin: 0 5px 0 0;
+    }
+
+    #searchbar:focus{
+        outline: none;
+    }
+
+   #submit {
+        height: 44px;
+        width: 20%;
+        background-color: #4495CE;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        font-family: 'Source Sans Pro', sans-serif; 
+        float: left;
+        color: white;
+    }
+
+
+    nav li a {
+        color: #4495CE;
+        opacity: 0;
+    }
+
+    nav li a {
+        transition: all 300ms ease 0s;
+    }
+
+    .sos {
+        padding-top: 50px;
+        display: inline-block;
+        opacity: 0;
+        transition: all 300ms ease 0s;
+    }
+
+    .active nav li a{
+        opacity: 1;
+    }
+
+    .active .sos {
+        opacity: 1;
+    }
+
+
+/* ==========================================================================
+   columns
+   ========================================================================== */
+
+
+    .columns {
+        width: 85%;
+        margin: 0 auto;
+        font-family: 'Source Sans Pro', sans-serif; 
+        margin-top: 100px;
+    }
+
+    .column-one {
+        width: 23%;
+        float:left;
+        margin: 10px;
+        padding-top: 70px;
+    
+    }
+
+    .column-two {
+        width: 23%;
+        float:left;
+        padding: 10px;
+    }
+
+    .column-three {
+        width: 23%;
+        float: left;
+        padding:10px;
+        padding-top: 70px;
+    }
+
+    .column-four {
+        width: 23%;
+        float: left;
+        padding: 10px;
+    }
+
+    .columns ul {
+        list-style: none;
+        padding-left: 25px;
+        margin: 0;
+        padding: 0 0 0 20px;
+        transition: all 200ms ease-in;
+        opacity: 0;
+
+    }
+
+    .columns li {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        padding: 5px;
+        text-align: left;
+        
+    }
+
+/*    .columns h1 {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        transform: translateY(100px);
+        transition: all 200ms ease-in;
+    }*/
+
+
+/*    .payments-requests li {
+        transition: all 300ms ease 0s;
+        font-size: 15px;
+    }
+    
+    need to come back to this - not sure what da deal is
+
+    .active .payments-requests li {
+        background-color: red;
+
+    }*/
+ 
+
+
+/* ==========================================================================
+   main topics styles
+   ========================================================================== */
+
+   .payments-requests {
+        border: 1px solid #eee;
+        border-radius: 4px; 
+        height: 444px;
+        margin: 0 auto;
+        position: relative;  
+    }
+
+        .payments-requests h1 {
+            position: absolute;
+            top: 20%;
+            width: 80%;
+            margin: 0 auto;
+            right: 0;
+            left: 0;
+            height: 600px;
+            text-align: center;
+            transform: translateY(100px);
+            transition: all 200ms ease-in;
+        }
+
+        .payments-requests ul {
+            list-style: none;
+            padding-left: 25px;
+            margin: 0;
+            padding: 0 0 0 20px;
+            transition: all 200ms ease-in;
+            opacity: 0;
+            position: absolute;
+            top: 20%;
+
+        }
+
+        .payments-requests ul:hover {
+            opacity: 1;
+            position: absolute;
+            top: 20%;
+        }
+
+        .payments-requests:hover h1 { 
+            transform: translateY(-70px); 
+
+        }
+
+
+    .settings {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        margin-top: 20px;
+        height: 280px;
+    }
+
+       .settings h1 {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            transform: translateY(100px);
+            transition: all 200ms ease-in;
+            padding-top: 10%;
+        }
+
+        .settings ul {
+            list-style: none;
+            padding-left: 25px;
+            margin: 0;
+            padding: 0 0 0 20px;
+            transition: all 200ms ease-in;
+            opacity: 0;
+            padding-top: 15%
+
+        }
+
+        .settings:hover ul {
+            opacity: 1;
+            padding-top: 5%
+
+        }
+
+        .settings:hover h1 { 
+            transform: translateY(5px); 
+
+        }
+
+    .signing-in {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        height: 309px;
+    }
+
+    .about-venmo {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        margin-top: 20px;
+        height: 234px;
+    }
+
+    .signing-up {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        margin-top: 20px;
+        height: 453px;
+    }
+
+    .bank-transfers {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        height: 200px;
+    }
+
+    .in-apps {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        margin-top: 20px;
+        height: 520px;
+    }
+
+    .banks-cards {
+        border: 1px solid #eee;
+        border-radius: 4px;
+        height: 488px;
+    }
+
+    .accept-venmo {
+        border: 1px solid #eee;
+        border-radius: 4px;  
+        height: 321px;
+        margin top: 20px;
+    }
 
 
 
+/* ==========================================================================
+   get in touch section
+   ========================================================================== */
+
+   .get-in-touch {
+        width: 50%;
+        clear: both;
+        text-align: center;
+        padding: 20px;
+        margin: 0 auto;
+        font-family: 'Source Sans Pro', sans-serif; 
+   }
+
+   .top-line i {
+        padding: 25px;
+        margin: 12px;
+        margin-top: 5px;
+   }
+
+   .get-in-touch p {
+        font-size: 28px;
+        color: #4495CE;
+   }
+
+   .bottom-line a {
+        margin: 9px;
+        text-decoration: none;
+        color: #4495CE;
+   }
 
 
+/* ==========================================================================
+   footer styles
+   ========================================================================== */
 
-
-
-
-
-
-
+    footer {
+        width: 100%;
+        clear: both;
+    }
+        
 
 
 
